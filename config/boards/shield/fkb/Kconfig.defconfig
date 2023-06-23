@@ -1,6 +1,6 @@
-if SHIELD_FBK
+if SHIELD_FKB
 
 config ZMK_KEYBOARD_NAME
-    default "FBK"
+    default "FKB"
 
 endif
