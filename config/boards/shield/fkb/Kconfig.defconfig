@@ -1,7 +1,7 @@
 f SHIELD_RANDIR
 	
 config ZMK_KEYBOARD_NAME
-    default "Randir"
+    default "FKB"
 
 config ADC
 	default y
