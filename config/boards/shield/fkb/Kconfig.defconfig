@@ -4,7 +4,3 @@ config ZMK_KEYBOARD_NAME
     default "FBK"
 
 endif
-config ADC
-	default y
-	
-endif
