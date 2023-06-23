@@ -14,5 +14,5 @@
 ---
 include:
   - board: nrfmicro_13
-    shield: randir
+    shield: fkb
 
