@@ -1,7 +1,7 @@
 if SHIELD_FKB
 	
 config ZMK_KEYBOARD_NAME
-    default "Fkb"
+    default "fkb"
 
 config ADC
 	default y
