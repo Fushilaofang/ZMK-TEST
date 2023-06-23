@@ -1,4 +1,4 @@
-f SHIELD_RANDIR
+f SHIELD_FKB
 	
 config ZMK_KEYBOARD_NAME
     default "FKB"
