@@ -41,15 +41,5 @@ RC(0,0) RC(0,1) RC(0,2)
         min_on = <256>;
 	/*num_axis = <1>;*/
         reverse;
-    };
-
-sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&joystickx>;
-    };
-		
-};
-
-&adc {
-	status = "okay";
+    };	
 };
