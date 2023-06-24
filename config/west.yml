@@ -13,18 +13,18 @@ manifest:
 #      remote: 
 #      revision: main
 #      import: app/west.yml
-#    - name: zmk-joystick
-#      remote: codeandr3w
-#      revision: mousepr-andrew
-#      import: app/west.yml
+    - name: zmk-joystick
+      remote: codeandr3w
+      revision: mousepr-andrew
+      import: app/west.yml
 #    - name: zmk
 #      remote: zmkfirmware
 #      revision: mousepr-andrew
 #      import: app/west.yml
-    - name: zmk-joystick
-      remote: codeandr3w
-      revision: joystickpr
-      import: app/west.yml
+#    - name: zmk-joystick
+#      remote: codeandr3w
+#      revision: joystickpr
+#      import: app/west.yml
 #    - name: zmk
 #      remote: tewtham
 #      revision: dactyl_typesafe
