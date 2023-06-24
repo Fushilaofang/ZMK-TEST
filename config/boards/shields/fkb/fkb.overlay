@@ -39,7 +39,7 @@ RC(0,0) RC(0,1) RC(0,2)
         resolution = <512>;
         frequency = <50>;
         min_on = <256>;
-	num_axis = <1>;
+	/*num_axis = <1>;*/
         reverse;
     };
 
