@@ -5,7 +5,7 @@ manifest:
 #    - name: codeandr3w
 #      url-base: https://github.com/codeandr3w
     - name: tewtham
-      url-base: https://github.com/tewtham
+      url-base: https://github.com/
 #    - name: zmkfirmware
 #      url-base: https://github.com/1770438260
   projects:
@@ -26,7 +26,7 @@ manifest:
 #      revision: joystickpr
 #      import: app/west.yml
     - name: zmk
-      remote: zmkfirmware
+      remote: tewtham
       revision: dactyl_typesafe
       import: app/west.yml
   self:
