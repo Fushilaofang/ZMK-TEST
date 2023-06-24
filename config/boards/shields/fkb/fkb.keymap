@@ -20,6 +20,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &out OUT_BLE
             >;
+sensor-bindings = <&xy_mm>;
         };
     };
 };
