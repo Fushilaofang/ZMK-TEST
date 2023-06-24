@@ -31,15 +31,23 @@ RC(0,0) RC(0,1) RC(0,2)
            ;
     };
 	
- joystickx: joystickx {
+   sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&joystickxy>;
+    };
+
+    joystickxy: joystickxy {
         compatible = "joystick";
-        label = "JOYSTICKX";
-        io-channels = <&adc 6>;
-        status = "okay";
-        resolution = <512>;
-        frequency = <50>;
-        min_on = <256>;
-	/*num_axis = <1>;*/
-        reverse;
-    };	
+        label = "JOYSTICKXY";
+	io-channels = <&adc 5 &adc 0>;
+	status = "okay";
+	resolution = <512>;
+	frequency = <50>;
+	min_on = <200>;
+	num_axis = <2>;
+    };
+};
+
+&adc {
+	status = "okay";
 };
