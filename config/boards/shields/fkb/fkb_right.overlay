@@ -12,6 +12,8 @@
             ;
     };
 	
-   
+&joystickxy {
+    status = "okay";
+};   
 
 
