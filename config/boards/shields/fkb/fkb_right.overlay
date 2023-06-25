@@ -1,4 +1,4 @@
-#include "cirquetrackpad.dtsi"
+#include "fkb.dtsi"
 
 &default_transform {
 	col-offset = <3>;
