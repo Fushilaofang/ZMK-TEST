@@ -1,0 +1,31 @@
+#include "cirquetrackpad.dtsi"
+
+&default_transform {
+	col-offset = <3>;
+};
+
+&kscan0 {
+       col-gpios
+            = <&pro_micro 10 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+            ;
+    };
+	
+   sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&joystickxy>;
+    };
+
+    joystickxy: joystickxy {
+        compatible = "joystick";
+        label = "JOYSTICKXY";
+	io-channels = <&adc 5 &adc 0>;
+	status = "okay";
+	resolution = <512>;
+	frequency = <50>;
+	min_on = <200>;
+	num_axis = <2>;
+    };
+
+
