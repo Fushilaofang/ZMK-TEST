@@ -12,20 +12,6 @@
             ;
     };
 	
-   sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&joystickxy>;
-    };
-
-    joystickxy: joystickxy {
-        compatible = "joystick";
-        label = "JOYSTICKXY";
-	io-channels = <&adc 5 &adc 0>;
-	status = "okay";
-	resolution = <512>;
-	frequency = <50>;
-	min_on = <200>;
-	num_axis = <2>;
-    };
+   
 
 
