@@ -1,2 +1,5 @@
-config SHIELD_FKB
-    def_bool $(shields_list_contains,fkb)
+config SHIELD_FKB_LEFT
+    def_bool $(shields_list_contains,fkb_left)
+
+config SHIELD_FKB_RIGHT
+    def_bool $(shields_list_contains,fkbd_right)
