@@ -15,8 +15,6 @@ config ZMK_SPLIT
 
 endif
 
-if SHIELD_NICE_VIEW
-
 config LV_Z_VDB_SIZE
     default 100
 
