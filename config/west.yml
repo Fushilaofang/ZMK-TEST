@@ -6,8 +6,11 @@ manifest:
 #      url-base: https://github.com/codeandr3w
 #    - name: tewtham
 #      url-base: https://github.com/tewtham
+#    - name: zmkfirmware
+#      url-base: https://github.com/1770438260
     - name: zmkfirmware
-      url-base: https://github.com/1770438260
+      url-base: https://github.com/ufan
+      
   projects:
 #    - name: zmk
 #      remote: 
@@ -17,10 +20,10 @@ manifest:
 #      remote: codeandr3w
 #      revision: mousepr-andrew
 #      import: app/west.yml
-    - name: zmk
-      remote: zmkfirmware
-      revision: mousepr-andrew
-      import: app/west.yml
+#    - name: zmk
+#      remote: zmkfirmware
+#      revision: mousepr-andrew
+#      import: app/west.yml
 #    - name: zmk-joystick
 #      remote: codeandr3w
 #      revision: joystickpr
@@ -29,5 +32,9 @@ manifest:
 #      remote: tewtham
 #      revision: dactyl_typesafe
 #      import: app/west.yml
+    - name: zmk
+      remote: zmkfirmware
+      revision: ptdevice-refactor
+      import: app/west.yml
   self:
     path: config
