@@ -6,15 +6,6 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
         default y
 
-endif
-
-if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
-
-config ZMK_SPLIT
-	default y	
-
-endif
-
 config LV_Z_VDB_SIZE
     default 100
 
@@ -60,6 +51,15 @@ endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
 config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
     select LV_FONT_MONTSERRAT_26
+
+endif
+
+if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
+
+config ZMK_SPLIT
+	default y	
+
+endif
 
 config MOUSE_LAYER_INDEX
 	int "Index of mouse layer"
