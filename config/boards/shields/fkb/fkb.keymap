@@ -20,7 +20,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &out OUT_BLE  &none  &kp CAPS  &none
             >;
-sensor-bindings = <&xy_mm>;
+trackball-bindings = <&tmv_coarse>;
         };
     };
 };
