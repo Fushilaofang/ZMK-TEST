@@ -34,7 +34,7 @@ config CUSTOM_WIDGET_STATUS
     select LV_USE_IMG
     select LV_USE_CANVAS
 
-if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
+if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
 
 config CUSTOM_WIDGET_STATUS
     select LV_FONT_MONTSERRAT_18
@@ -42,17 +42,13 @@ config CUSTOM_WIDGET_STATUS
     select LV_FONT_UNSCII_16
     select ZMK_WPM
 
+config ZMK_SPLIT
+	default y
+
 endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
 config CUSTOM_WIDGET_INVERTED
     bool "Invert custom status widget"
-
-endif
-
-if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
-
-config ZMK_SPLIT
-	default y	
 
 endif
 
