@@ -6,14 +6,9 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
         default y
 
-endif
-
-if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
-
-config ZMK_SPLIT
-	default y	
-
-endif
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
 
 if ZMK_DISPLAY
 
@@ -51,6 +46,13 @@ endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
 config CUSTOM_WIDGET_INVERTED
     bool "Invert custom status widget"
+
+endif
+
+if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
+
+config ZMK_SPLIT
+	default y	
 
 endif
 
