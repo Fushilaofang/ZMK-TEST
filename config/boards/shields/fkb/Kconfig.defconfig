@@ -1,8 +1,19 @@
-if SHIELD_FKB_LEFT
+if SHIELD_FKB_RIGHT
 
-choice ZMK_DISPLAY_STATUS_SCREEN
-    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
-endchoice
+config ZMK_KEYBOARD_NAME
+        default "FKB"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+
+endif
+
+if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
+
+config ZMK_SPLIT
+	default y	
+
+endif
 
 if ZMK_DISPLAY
 
@@ -28,7 +39,7 @@ config CUSTOM_WIDGET_STATUS
     select LV_USE_IMG
     select LV_USE_CANVAS
 
-if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
+if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
 config CUSTOM_WIDGET_STATUS
     select LV_FONT_MONTSERRAT_18
@@ -36,15 +47,11 @@ config CUSTOM_WIDGET_STATUS
     select LV_FONT_UNSCII_16
     select ZMK_WPM
 
-config ZMK_SPLIT
-	default y
-
 endif # !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
 config CUSTOM_WIDGET_INVERTED
     bool "Invert custom status widget"
 
-endif
 
 config MOUSE_LAYER_INDEX
 	int "Index of mouse layer"
@@ -57,9 +64,3 @@ config SCROLL_LAYER_INDEX
 config MOUSE_LAYER_ACTIVE_MS
 	int "Amount of milliseconds the mouse layer will be active after using the trackball"
 	default 400
-
-config ZMK_KEYBOARD_NAME
-        default "FKB"
-
-config ZMK_SPLIT_ROLE_CENTRAL
-        default y
