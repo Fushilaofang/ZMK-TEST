@@ -14,7 +14,7 @@
 ---
 include:
   - board: nrfmicro_13
-    shield: fkb_left/* nice_view_adapter nice_view*/
+    shield: fkb_left
   - board: nrfmicro_13
     shield: fkb_right
 
