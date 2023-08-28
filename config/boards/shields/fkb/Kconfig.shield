@@ -1,5 +1,5 @@
-config SHIELD_FKB_LEFT NICE_VIEW_ADAPTER NICE_VIEW NICE_VIEW_ADAPTER NICE_VIEW
-    def_bool $(shields_list_contains,fkb_left nice_view_adapter nice_view)
+config SHIELD_FKB_LEFT
+    def_bool $(shields_list_contains,fkb_left)
 
 config SHIELD_FKB_RIGHT
     def_bool $(shields_list_contains,fkbd_right)
