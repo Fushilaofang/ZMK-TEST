@@ -30,18 +30,46 @@ sensors {
         sensors = <&joystickxy>;
     };
 
-    joystickxy: joystickxy {
-        compatible = "joystick";
-        label = "JOYSTICKXY";
-	io-channels = <&adc 5 &adc 0>;
-	status = "disabled";
-	resolution = <512>;
-	frequency = <50>;
-	min_on = <200>;
-	num_axis = <2>;
-    };
+	left_encoder: encoder_left {
+		compatible = "alps,ec11";
+    status = "disabled";
+		label = "LEFT_ENCODER";
+		a-gpios = <&gpio0 26 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		b-gpios = <&gpio0 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		resolution = <2>;
+	};
+
+	right_encoder: encoder_right {
+		compatible = "alps,ec11";
+    status = "disabled";
+		label = "RIGHT_ENCODER";
+		a-gpios = <&gpio0 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		b-gpios = <&gpio0 26 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		resolution = <2>;
+	};
+
+	sensors {
+		compatible = "zmk,keymap-sensors";
+		sensors = <&left_encoder &right_encoder>;
+	};
 };
 
-&adc {
-	status = "okay";
+	trackballs {
+		compatible = "zmk,keymap-trackballs";
+		trackballs = <&trackball>;
+	};
+};
+
+&spi0 {
+	compatible = "nordic,nrf-spim";
+	status = "disabled";
+
+	trackball: trackball@0 {
+		compatible = "pixart,pmw3610";
+		status = "disabled";
+		reg = <0>;
+		label = "TRACKBALL";
+		spi-max-frequency = <2000000>;
+		duplex = <2048>; // required by 3-wire spi
+	};
 };
