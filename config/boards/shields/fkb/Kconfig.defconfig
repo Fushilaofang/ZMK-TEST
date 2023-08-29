@@ -45,4 +45,7 @@ endif
 config CUSTOM_WIDGET_INVERTED
     bool "Invert custom status widget"
 
+config ZMK_DISPLAY_STATUS_SCREEN_BUILT_IN
+    select LV_FONT_MONTSERRAT_26
+
 endif
