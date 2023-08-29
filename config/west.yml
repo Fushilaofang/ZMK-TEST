@@ -1,20 +1,20 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+#    - name: zmkfirmware
+#      url-base: https://github.com/zmkfirmware
 #    - name: codeandr3w
 #      url-base: https://github.com/codeandr3w
 #    - name: tewtham
 #      url-base: https://github.com/tewtham
 #    - name: zmkfirmware
 #      url-base: https://github.com/1770438260
-#    - name: ufan
-#      url-base: https://github.com/ufan
+    - name: zmkfirmware
+      url-base: https://github.com/ufan
       
   projects:
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
+#    - name: zmk
+#      remote: 
+#      revision: main
 #      import: app/west.yml
 #    - name: zmk-joystick
 #      remote: codeandr3w
@@ -32,9 +32,9 @@ manifest:
 #      remote: tewtham
 #      revision: dactyl_typesafe
 #      import: app/west.yml
-#    - name: zmk
-#      remote: ufan
-#      revision: blade
+    - name: zmk
+      remote: zmkfirmware
+      revision: ptdevice-refactor
       import: app/west.yml
   self:
     path: config
