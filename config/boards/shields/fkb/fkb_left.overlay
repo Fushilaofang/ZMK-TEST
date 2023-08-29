@@ -12,7 +12,7 @@
 	status = "okay";
 };
 
-&spi1 {
+&spi0 {
     status = "okay";
     nice_view: ls0xx@0 {
         compatible = "sharp,ls0xx";
