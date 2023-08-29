@@ -13,9 +13,9 @@
 #
 ---
 include:
-  - board: nrfmicro_13
+  - board: nrfmacro
     shield: fkb_left
-  - board: nrfmicro_13
+  - board: nrfmacro
     shield: fkb_right
 
 
