@@ -8,6 +8,10 @@
             ;
     };
 
+&left_encoder {
+	status = "okay";
+};
+
 &spi1 {
     status = "okay";
     nice_view: ls0xx@0 {
@@ -24,8 +28,4 @@
     chosen {
         zephyr,display = &nice_view;
     };
-};
-
-&left_encoder {
-	status = "okay";
 };
