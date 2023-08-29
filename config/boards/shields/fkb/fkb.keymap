@@ -19,7 +19,7 @@
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &out OUT_BLE  &none  &kp CAPS  &none
             >;
-trackball-bindings = <&tmv>;
+//trackball-bindings = <&tmv>;
         };
     };
 };
