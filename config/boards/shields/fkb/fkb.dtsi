@@ -45,11 +45,6 @@ trackballs {
            ;
 	};
 
-sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&joystickxy>;
-    };
-
 	left_encoder: encoder_left {
 		compatible = "alps,ec11";
     status = "disabled";
