@@ -8,7 +8,7 @@ manifest:
 #      url-base: https://github.com/tewtham
 #    - name: zmkfirmware
 #      url-base: https://github.com/1770438260
-    - name: zmkfirmware
+    - name: ufan
       url-base: https://github.com/ufan
       
   projects:
@@ -33,8 +33,8 @@ manifest:
 #      revision: dactyl_typesafe
 #      import: app/west.yml
     - name: zmk
-      remote: zmkfirmware
-      revision: ptdevice-refactor
+      remote: ufan
+      revision: blade
       import: app/west.yml
   self:
     path: config
