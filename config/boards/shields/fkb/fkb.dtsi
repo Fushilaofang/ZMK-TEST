@@ -15,26 +15,6 @@ RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)
 	  >;
 	};
 
-trackballs {
-	compatible = "zmk,keymap-trackballs";
-	trackballs = <&trackball>;
-	    };
-};
-
-&spi0 {
-	compatible = "nordic,nrf-spim";
-	status = "disabled";
-
-	trackball: trackball@0 {
-		compatible = "pixart,pmw3610";
-		status = "disabled";
-		reg = <0>;
-		label = "TRACKBALL";
-		spi-max-frequency = <2000000>;
-		duplex = <2048>; // required by 3-wire spi
-	};
-
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
@@ -67,35 +47,4 @@ trackballs {
 		compatible = "zmk,keymap-sensors";
 		sensors = <&left_encoder &right_encoder>;
 	};
-};
-
-/* display */
-&pro_micro_spi {
-// &spi2 {
-  compatible = "nordic,nrf-spim";
-  sck-pin = <17>;
-  mosi-pin = <15>;
-  cs-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
-  // not used, but required by spim binding; can be reuesd in the keymap for normal key press
-  miso-pin = <10>;
-
-  // activate this device
-  status = "okay";
-
-  // spi-device: gooddisplay GDEW0102T4
-  shield_epd: il0323@0 {
-    compatible = "gooddisplay,il0323";
-    reg = <0>;
-    label = "DISPLAY";
-    spi-max-frequency = <4000000>;
-
-    height = <128>;
-    width = <80>;
-    reset-gpios = <&gpio0 8  GPIO_ACTIVE_LOW>;
-    dc-gpios    = <&gpio0 20 GPIO_ACTIVE_LOW>;
-    busy-gpios  = <&gpio0 6  GPIO_ACTIVE_LOW>;
-    pwr = [03 00 26 26];
-    cdi = <0xd2>;
-    tcon = <0x22>;
-  }; 
 };
