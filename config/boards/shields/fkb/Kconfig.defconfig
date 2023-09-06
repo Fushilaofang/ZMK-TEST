@@ -12,6 +12,7 @@ if SWEEP_PRO_RIGHT
 
 config ZMK_KEYBOARD_NAME
   default "fkb-R"
+
 endif
 
 if SHIELD_FKB_LEFT || SHIELD_FKB_RIGHT
@@ -21,9 +22,5 @@ config ZMK_SPLIT
 
 config ZMK_USB
 	default y
-
-config NRFMACRO_MARKLOGO_NAME
-  string  "Source file name of the shield mark logo"
-  default "sweepro-marklogo.c"
 
 endif
